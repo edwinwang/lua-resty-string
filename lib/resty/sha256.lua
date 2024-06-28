@@ -32,7 +32,7 @@ int SHA256_Final(unsigned char *md, SHA256_CTX *c);
 
 local digest_len = 32
 
-local buf = ffi_new("char[?]", digest_len)
+local buf = ffi_new("unsigned char[?]", digest_len)
 local ctx_ptr_type = ffi.typeof("SHA256_CTX[1]")
 
 
